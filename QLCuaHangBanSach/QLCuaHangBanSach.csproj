@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AC6F74CA-CC97-4965-A1C5-55FEDE234F6D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>QLCuaHangBanSach</RootNamespace>
+    <AssemblyName>QLCuaHangBanSach</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DAO\AuthorDAO.cs" />
+    <Compile Include="DAO\CategoryDAO.cs" />
+    <Compile Include="DAO\UserDAO.cs" />
+    <Compile Include="Models\CategoryModel.cs" />
+    <Compile Include="Models\UserModel.cs" />
+    <Compile Include="Views\AuthorManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AuthorManagement.Designer.cs">
+      <DependentUpon>AuthorManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AuthorModel.cs" />
+    <Compile Include="DAO\BookDAO.cs" />
+    <Compile Include="Models\BookModel.cs" />
+    <Compile Include="Views\BookManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\BookManagement.Designer.cs">
+      <DependentUpon>BookManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ChiTietHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ChiTietHoaDon.Designer.cs">
+      <DependentUpon>ChiTietHoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ChiTietPhieuNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ChiTietPhieuNhap.Designer.cs">
+      <DependentUpon>ChiTietPhieuNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ForgotPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ForgotPassword.Designer.cs">
+      <DependentUpon>ForgotPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DAO\PublisherDAO.cs" />
+    <Compile Include="Views\HoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\HoaDon.Designer.cs">
+      <DependentUpon>HoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PhieuNhapSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\PhieuNhapSach.Designer.cs">
+      <DependentUpon>PhieuNhapSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PublisherManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\PublisherManagement.Designer.cs">
+      <DependentUpon>PublisherManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PublisherModel.cs" />
+    <Compile Include="Views\Register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Register.Designer.cs">
+      <DependentUpon>Register.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SignIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\SignIn.Designer.cs">
+      <DependentUpon>SignIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\TheLoai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\TheLoai.Designer.cs">
+      <DependentUpon>TheLoai.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Views\AuthorManagement.resx">
+      <DependentUpon>AuthorManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BookManagement.resx">
+      <DependentUpon>BookManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ChiTietHoaDon.resx">
+      <DependentUpon>ChiTietHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ChiTietPhieuNhap.resx">
+      <DependentUpon>ChiTietPhieuNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ForgotPassword.resx">
+      <DependentUpon>ForgotPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\HoaDon.resx">
+      <DependentUpon>HoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PhieuNhapSach.resx">
+      <DependentUpon>PhieuNhapSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PublisherManagement.resx">
+      <DependentUpon>PublisherManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Register.resx">
+      <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SignIn.resx">
+      <DependentUpon>SignIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Views\TheLoai.resx">
+      <DependentUpon>TheLoai.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Book_Register.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Book_DangNhap.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\bookPNG_Register.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\HAU-Logo-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\BookPNG_DangNhap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="FileExport\AuthorList.txt" />
+    <Content Include="FileExport\BookList.txt" />
+    <Content Include="FileExport\PublisherList.txt" />
+    <None Include="Resources\undraw_sign_up_n6im-02-01.png" />
+    <None Include="Resources\undraw_sign_up_n6im-01.png" />
+    <None Include="Resources\undraw_profile_details_re_ch9r-01.png" />
+    <None Include="Resources\undraw_bibliophile_re_xarc-01.png" />
+    <None Include="Resources\undraw_online_payments_re_y8f2-01.png" />
+    <None Include="Resources\undraw_message_sent_re_q2kl-01.png" />
+    <None Include="Resources\icons8-author-90-01.png" />
+    <None Include="Resources\icons8-receipt-90-01.png" />
+    <None Include="Resources\icons8-bill-90-01.png" />
+    <None Include="Resources\icons8-category-90-01.png" />
+    <None Include="Resources\undraw_personal_notebook_re_d7dc-01.png" />
+    <None Include="Resources\undraw_road_to_knowledge_m8s0-01.png" />
+    <None Include="Resources\undraw_education_f8ru-01.png" />
+    <None Include="Resources\undraw_books_re_8gea-01-01.png" />
+    <None Include="Images\HumanBook-01.png" />
+    <None Include="Resources\undraw_real_time_collaboration_c62i-01.png" />
+    <None Include="Resources\icons8-logout-90-01.png" />
+    <None Include="Resources\home---01.png" />
+    <None Include="Resources\icons8-notebook-100-01.png" />
+    <None Include="Resources\icons8-book-90-01.png" />
+    <None Include="Resources\home-01.png" />
+    <None Include="Resources\home1.png" />
+    <None Include="Resources\home.png" />
+    <None Include="Images\HumanBook.png" />
+    <None Include="Images\Book_PublisherManager.jpg" />
+    <None Include="Images\Book_AuthorManager.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
